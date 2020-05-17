@@ -93,6 +93,9 @@ namespace Steinberg
 	typedef char char8;
 #ifdef _NATIVE_WCHAR_T_DEFINED
 	typedef __wchar_t char16;
+// PIN: 06.04.2020 - changed the wchar_t to char16 for mingw
+#elif defined(__MINGW32__)
+	typedef wchar_t char16;
 #elif SMTG_CPP11
 	typedef char16_t char16;
 #else

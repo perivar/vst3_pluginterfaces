@@ -59,12 +59,15 @@
 		#define _CRT_SECURE_NO_WARNINGS
 	#endif
 
+	// PIN: 25.02.2020
+	#ifdef _MSC_VER
 	#pragma warning (disable : 4244) // Conversion from 'type1' to 'type2', possible loss of data.
 	#pragma warning (disable : 4250) // Inheritance via dominance is allowed
 	#pragma warning (disable : 4996) // deprecated functions
 
 	#pragma warning (3 : 4189) // local variable is initialized but not referenced
 	#pragma warning (3 : 4238) // nonstandard extension used : class rvalue used as lvalue
+	#endif
 
 	#if defined (_WIN64) || defined (_M_ARM64)
 		#define SMTG_PLATFORM_64 1
